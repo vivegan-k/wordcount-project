@@ -1,0 +1,19 @@
+<h1> Result</h1>
+
+<a href="{% url 'about' %}"> ABOUT </a>
+<br/>
+
+<a href="{% url 'test' %}"> Try again! </a>
+<h3>Text entered is: </h3> {{fulltext}}
+<h3> Word count is: </h3> {{count}}
+<h3> Word dictionary: </h3>
+
+{% for word, count in ordered_words %}
+
+{{word}} - {{count}}
+
+
+
+<br/>
+
+{% endfor %}
